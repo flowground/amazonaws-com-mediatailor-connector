@@ -1,0 +1,159 @@
+{
+    "title": "AWS MediaTailor",
+    "description": "<p>Use the AWS Elemental MediaTailor SDK to configure scalable ad insertion for your live and VOD content. With AWS Elemental MediaTailor, you can serve targeted ads to viewers while maintaining broadcast quality in over-the-top (OTT) video applications. For information about using the service, including detailed information about the settings covered in this guide, see the AWS Elemental MediaTailor User Guide.<p>Through the SDK, you manage AWS Elemental MediaTailor configurations the same as you do through the console. For example, you specify ad insertion behavior and mapping information for the origin server and the ad decision server (ADS).</p>",
+    "docsUrl": "https://docs.aws.amazon.com/mediatailor/",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediatailor/2018-04-23/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.mediatailor.amazonaws.com/",
+                    "http://api.mediatailor.amazonaws.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "hmac": {
+                "label": "Authorization (hmac)",
+                "viewClass": "TextFieldView",
+                "note": "Amazon Signature authorization v4"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "PutPlaybackConfiguration": {
+            "main": "./lib/actions/PutPlaybackConfiguration.js",
+            "title": "Adds a new playback configuration to AWS Elemental MediaTailor. ",
+            "description": "Adds a new playback configuration to AWS Elemental MediaTailor. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPlaybackConfiguration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePlaybackConfiguration": {
+            "main": "./lib/actions/DeletePlaybackConfiguration.js",
+            "title": "Deletes the playback configuration for the specified name. ",
+            "description": "Deletes the playback configuration for the specified name. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePlaybackConfiguration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPlaybackConfiguration": {
+            "main": "./lib/actions/GetPlaybackConfiguration.js",
+            "title": "Returns the playback configuration for the specified name. ",
+            "description": "Returns the playback configuration for the specified name. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPlaybackConfiguration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListPlaybackConfigurations": {
+            "main": "./lib/actions/ListPlaybackConfigurations.js",
+            "title": "Returns a list of the playback configurations defined in AWS Elemental MediaTailor. You can specify a maximum number of configurations to return at a time. The default maximum is 50. Results are returned in pagefuls. If MediaTailor has more configurations than the specified maximum, it provides parameters in the response that you can use to retrieve the next pageful. ",
+            "description": "Returns a list of the playback configurations defined in AWS Elemental MediaTailor. You can specify a maximum number of configurations to return at a time. The default maximum is 50. Results are returned in pagefuls. If MediaTailor has more configurations than the specified maximum, it provides parameters in the response that you can use to retrieve the next pageful. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListPlaybackConfigurations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UntagResource": {
+            "main": "./lib/actions/UntagResource.js",
+            "title": "Removes tags from the specified playback configuration resource. You can specify one or more tags to remove. ",
+            "description": "Removes tags from the specified playback configuration resource. You can specify one or more tags to remove. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UntagResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListTagsForResource": {
+            "main": "./lib/actions/ListTagsForResource.js",
+            "title": "Returns a list of the tags assigned to the specified playback configuration resource. ",
+            "description": "Returns a list of the tags assigned to the specified playback configuration resource. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListTagsForResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "TagResource": {
+            "main": "./lib/actions/TagResource.js",
+            "title": "Adds tags to the specified playback configuration resource. You can specify one or more tags to add. ",
+            "description": "Adds tags to the specified playback configuration resource. You can specify one or more tags to add. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/TagResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
