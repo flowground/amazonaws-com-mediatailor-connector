@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the AWS MediaTailor API (version 2018-04-23).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/mediatailor/2018-04-23/swagger.json<br/>
-Generated at: 2019-05-07T17:36:00+03:00
+Generated at: 2019-07-08T14:13:08+03:00
 
 ## API Description
 
@@ -17,7 +17,8 @@ Supported authorization schemes:
 - API Key
 ## Actions
 
-### Adds a new playback configuration to AWS Elemental MediaTailor.
+### PutPlaybackConfiguration
+> Adds a new playback configuration to AWS Elemental MediaTailor.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -30,7 +31,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes the playback configuration for the specified name.
+### DeletePlaybackConfiguration
+> Deletes the playback configuration for the specified name.<br/>
 
 #### Input Parameters
 * `Name` - _required_
@@ -43,7 +45,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Returns the playback configuration for the specified name.
+### GetPlaybackConfiguration
+> Returns the playback configuration for the specified name.<br/>
 
 #### Input Parameters
 * `Name` - _required_
@@ -56,7 +59,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Returns a list of the playback configurations defined in AWS Elemental MediaTailor. You can specify a maximum number of configurations to return at a time. The default maximum is 50. Results are returned in pagefuls. If MediaTailor has more configurations than the specified maximum, it provides parameters in the response that you can use to retrieve the next pageful.
+### ListPlaybackConfigurations
+> Returns a list of the playback configurations defined in AWS Elemental MediaTailor. You can specify a maximum number of configurations to return at a time. The default maximum is 50. Results are returned in pagefuls. If MediaTailor has more configurations than the specified maximum, it provides parameters in the response that you can use to retrieve the next pageful.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -69,7 +73,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Removes tags from the specified playback configuration resource. You can specify one or more tags to remove.
+### UntagResource
+> Removes tags from the specified playback configuration resource. You can specify one or more tags to remove.<br/>
 
 #### Input Parameters
 * `ResourceArn` - _required_
@@ -82,7 +87,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Returns a list of the tags assigned to the specified playback configuration resource.
+### ListTagsForResource
+> Returns a list of the tags assigned to the specified playback configuration resource.<br/>
 
 #### Input Parameters
 * `ResourceArn` - _required_
@@ -95,7 +101,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Adds tags to the specified playback configuration resource. You can specify one or more tags to add.
+### TagResource
+> Adds tags to the specified playback configuration resource. You can specify one or more tags to add.<br/>
 
 #### Input Parameters
 * `ResourceArn` - _required_

@@ -1,6 +1,6 @@
 {
     "title": "AWS MediaTailor",
-    "description": "<p>Use the AWS Elemental MediaTailor SDK to configure scalable ad insertion for your live and VOD content. With AWS Elemental MediaTailor, you can serve targeted ads to viewers while maintaining broadcast quality in over-the-top (OTT) video applications. For information about using the service, including detailed information about the settings covered in this guide, see the AWS Elemental MediaTailor User Guide.<p>Through the SDK, you manage AWS Elemental MediaTailor configurations the same as you do through the console. For example, you specify ad insertion behavior and mapping information for the origin server and the ad decision server (ADS).</p>",
+    "description": "Use the AWS Elemental MediaTailor SDK to configure scalable ad insertion for\nyour live and VOD content. With AWS Elemental MediaTailor, you can serve\ntargeted ads to viewers while maintaining broadcast quality in over-the-top\n(OTT) video applications. For information about using the service, including\ndetailed information about the settings covered in this guide, see the AWS\nElemental MediaTailor User Guide.\n\nThrough the SDK, you manage AWS Elemental MediaTailor configurations the same as\nyou do through the console. For example, you specify ad insertion behavior and\nmapping information for the origin server and the ad decision server (ADS).",
     "docsUrl": "https://docs.aws.amazon.com/mediatailor/",
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediatailor/2018-04-23/swagger.json",
     "envVars": {},
@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,7 +38,7 @@
     "actions": {
         "PutPlaybackConfiguration": {
             "main": "./lib/actions/PutPlaybackConfiguration.js",
-            "title": "Adds a new playback configuration to AWS Elemental MediaTailor. ",
+            "title": "PutPlaybackConfiguration",
             "description": "Adds a new playback configuration to AWS Elemental MediaTailor. ",
             "fields": {
                 "verbose": {
@@ -55,7 +55,7 @@
         },
         "DeletePlaybackConfiguration": {
             "main": "./lib/actions/DeletePlaybackConfiguration.js",
-            "title": "Deletes the playback configuration for the specified name. ",
+            "title": "DeletePlaybackConfiguration",
             "description": "Deletes the playback configuration for the specified name. ",
             "fields": {
                 "verbose": {
@@ -72,7 +72,7 @@
         },
         "GetPlaybackConfiguration": {
             "main": "./lib/actions/GetPlaybackConfiguration.js",
-            "title": "Returns the playback configuration for the specified name. ",
+            "title": "GetPlaybackConfiguration",
             "description": "Returns the playback configuration for the specified name. ",
             "fields": {
                 "verbose": {
@@ -89,7 +89,7 @@
         },
         "ListPlaybackConfigurations": {
             "main": "./lib/actions/ListPlaybackConfigurations.js",
-            "title": "Returns a list of the playback configurations defined in AWS Elemental MediaTailor. You can specify a maximum number of configurations to return at a time. The default maximum is 50. Results are returned in pagefuls. If MediaTailor has more configurations than the specified maximum, it provides parameters in the response that you can use to retrieve the next pageful. ",
+            "title": "ListPlaybackConfigurations",
             "description": "Returns a list of the playback configurations defined in AWS Elemental MediaTailor. You can specify a maximum number of configurations to return at a time. The default maximum is 50. Results are returned in pagefuls. If MediaTailor has more configurations than the specified maximum, it provides parameters in the response that you can use to retrieve the next pageful. ",
             "fields": {
                 "verbose": {
@@ -106,7 +106,7 @@
         },
         "UntagResource": {
             "main": "./lib/actions/UntagResource.js",
-            "title": "Removes tags from the specified playback configuration resource. You can specify one or more tags to remove. ",
+            "title": "UntagResource",
             "description": "Removes tags from the specified playback configuration resource. You can specify one or more tags to remove. ",
             "fields": {
                 "verbose": {
@@ -123,7 +123,7 @@
         },
         "ListTagsForResource": {
             "main": "./lib/actions/ListTagsForResource.js",
-            "title": "Returns a list of the tags assigned to the specified playback configuration resource. ",
+            "title": "ListTagsForResource",
             "description": "Returns a list of the tags assigned to the specified playback configuration resource. ",
             "fields": {
                 "verbose": {
@@ -140,7 +140,7 @@
         },
         "TagResource": {
             "main": "./lib/actions/TagResource.js",
-            "title": "Adds tags to the specified playback configuration resource. You can specify one or more tags to add. ",
+            "title": "TagResource",
             "description": "Adds tags to the specified playback configuration resource. You can specify one or more tags to add. ",
             "fields": {
                 "verbose": {
